@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Quiz | Ngobar Part 2</title>
+
+    <link rel="stylesheet" href="./styles/build/style.build.css" />
+  </head>
+  <body>
+    <div class="cards">
+      <div class="card-headers">
+        <img
+          src="/assets/svg/logo-mini-quiz.svg"
+          alt="mini-quiz"
+          loading="lazy"
+        />
+
+        <span>Mini Quiz Beginner</span>
+      </div>
+
+      <div class="card-body">
+        <div class="question-box">
+          <h4 id="question" class="question"></h4>
+        </div>
+
+        <p id="question_category" class="question-category"></p>
+      </div>
+
+      <div class="card-footer">
+        <button type="button" id="button_submit" class="button-submit">
+          Kirim
+        </button>
+
+        <p class="footer-redirect">
+          Ingin menambahkan pertanyaan? <a href="./pages/create.html">Gas</a>
+        </p>
+      </div>
+    </div>
+
+    <script type="module" src="./scripts/app.home.js"></script>
+  </body>
+</html>

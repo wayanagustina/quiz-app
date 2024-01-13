@@ -1,0 +1,145 @@
+@import "variables";
+@import "mixins";
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  @include container();
+  background-color: $light-green;
+}
+
+.cards {
+  @include cardContainer();
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  & .card-headers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    & span {
+      font-size: 18px;
+      font-weight: 600;
+      color: $dark;
+    }
+  }
+
+  & .card-body {
+    & .question-box {
+      padding: 26px 18px;
+      border-radius: 14px;
+      background-color: $white;
+      border: 2px solid $light-gray;
+      box-shadow: 5px 5px 0px 0px rgba(109, 109, 109, 0.25);
+
+      & .question {
+        text-align: left;
+        font-size: 16px;
+        font-weight: 500;
+        color: #1f2937;
+        line-height: 1.4;
+        user-select: none;
+
+        & > span {
+          font-size: 16px;
+          padding-left: 2px;
+          font-weight: 800;
+          color: $dark;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    & .question-category {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 16px;
+      font-weight: 600;
+      color: $gray;
+      user-select: none;
+    }
+
+    & .form-container {
+      margin-top: 30px;
+
+      & .form-control {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 16px;
+
+        & label {
+          font-size: 16px;
+          font-weight: 600;
+          color: $dark;
+          margin-bottom: 8px;
+        }
+
+        & input {
+          outline: none;
+          padding: 12px 16px;
+          border-radius: 8px;
+          border: 2px solid $light-gray;
+          font-size: 16px;
+          font-weight: 500;
+          color: $dark;
+          transition: all 0.3s ease-in-out;
+
+          &:focus {
+            border-color: $purple;
+          }
+        }
+      }
+    }
+  }
+
+  & .card-footer {
+    & .button-submit {
+      outline: none;
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: none;
+      background-color: $purple;
+      color: $white;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: darken($purple, 10%);
+      }
+    }
+
+    & .footer-redirect {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600;
+      color: $dark;
+
+      & a {
+        color: $purple;
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
