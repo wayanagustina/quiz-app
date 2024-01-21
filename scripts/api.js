@@ -34,6 +34,7 @@ export async function getQuestions() {
     //     "Content-Type": "application/json",
     //   },
     // });
+
     // const result = await response.json();
     // return result?.data;
   } catch (error) {
